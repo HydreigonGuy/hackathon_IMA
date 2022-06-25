@@ -3,6 +3,11 @@ var image_style = 'position: absolute; right: 20px; top: 350px; width: 40%;';
 
 function predict(id)
 {
+    if (!document.getElementById("date").value) {
+        document.getElementById("date").style.borderColor = "red";
+        return;
+    }
+    document.getElementById("date").style.borderColor = "black";
     body = {
         'date':document.getElementById("date").value,
         'id':id
@@ -21,6 +26,7 @@ function predict(id)
 function reset()
 {
     document.getElementById("board").innerHTML = "";
+    document.getElementById("date").style.borderColor = "black";
 }
 
 function create_map()
