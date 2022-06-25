@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CLIMA Home</title>
+        <title>CL-IMA Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css', _external=True) }}">
     </head>
 
     <body>
-        Team CLIMA
-        <button onclick="predict()">Predict</button>
+        <!-- HEADER -->
+        <div>
+            <h1 style="font-size: 100px; text-align: center;" onclick="reset()">
+                CL-IMA
+            </h1>
+        </div>
+        <!-- Nav 1 -->
+        <div>
+            <div style="margin: auto; width: 98%;">
+                <button class="nav1btn" onclick="predict(1)">Carte</button>
+                <button class="nav1btn" onclick="predict(2)">Alerte</button>
+                <button class="nav1btn" onclick="predict(3)">Eunice</button>
+            </div>
+        </div>
+        <!-- Board -->
+        <div id="board">
+        </div>
     </body>
     <script src="{{ url_for('static', filename='js/predict.js', _external=True) }}"></script>
 </html>

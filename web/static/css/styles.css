@@ -1,0 +1,12 @@
+
+.nav1btn{
+    background-color: navy;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 32%;
+    margin: 0.5%;
+}
