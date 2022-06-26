@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CL-IMA Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css', _external=True) }}">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+           integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+           crossorigin=""/>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <div>
+            <h1 style="font-size: 100px; text-align: center;" onclick="reset()">
+                CL-IMA
+            </h1>
+        </div>
+        <!-- Nav 1 -->
+        <div>
+            <div style="margin: auto; width: 98%;">
+                <button class="nav1btn" onclick="predict(4)">Global</button>
+                <button class="nav1btn" onclick="predict(1)">Climat</button>
+                <button class="nav1btn" onclick="predict(2)">Degats des eaux</button>
+                <button class="nav1btn" onclick="predict(3)">Bris de glace</button>
+                <button class="nav1btn" onclick="predict(5)">Statistiques</button>
+            </div>
+        </div>
+        <!-- Calendar -->
+        <!--h3 style="margin-left: 40px; margin-top: 80px;">Date</h3>
+        <input id="date" type="date" style="margin-left: 40px; font-size: 20px; border: solid black; padding: 5px; border-radius: 6px;"-->
+        <!-- Board -->
+        <div id="board">
+        </div>
+        <div>
+            <img src="/static/img/g4.png" style="width: 100%;">
+        </div>
+        <!-- for adding a map -->
+        <div id="map"></div>
+        <!--button onclick="create_map()">Button</button-->
+
+    </body>
+    <script src="{{ url_for('static', filename='js/predict.js', _external=True) }}"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+       integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+       crossorigin=""></script>
+</html>

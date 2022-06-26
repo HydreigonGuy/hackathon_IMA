@@ -51,6 +51,9 @@ function predict(id)
         case 4:
             window.location.href = "/static/maps/27-06-2022-all.html";
             break;
+        case 5:
+            window.location.href = "/stats";
+            break;
         default:
             window.location.href = "/";
     }
