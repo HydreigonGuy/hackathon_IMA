@@ -18,21 +18,22 @@
         <!-- Nav 1 -->
         <div>
             <div style="margin: auto; width: 98%;">
-                <button class="nav1btn" onclick="predict(1)">Carte</button>
-                <button class="nav1btn" onclick="predict(2)">Alerte</button>
-                <button class="nav1btn" onclick="predict(3)">Eunice</button>
+                <button class="nav1btn" onclick="predict(4)">Global</button>
+                <button class="nav1btn" onclick="predict(1)">Climat</button>
+                <button class="nav1btn" onclick="predict(2)">Degats des eaux</button>
+                <button class="nav1btn" onclick="predict(3)">Bris de glace</button>
             </div>
         </div>
         <!-- Calendar -->
-        <h3 style="margin-left: 40px; margin-top: 80px;">Date</h3>
-        <input id="date" type="date" style="margin-left: 40px; font-size: 20px; border: solid black; padding: 5px; border-radius: 6px;">
+        <!--h3 style="margin-left: 40px; margin-top: 80px;">Date</h3>
+        <input id="date" type="date" style="margin-left: 40px; font-size: 20px; border: solid black; padding: 5px; border-radius: 6px;"-->
         <!-- Board -->
         <div id="board">
         </div>
 
         <!-- for adding a map -->
-        <!--div id="map"></div>
-        <button onclick="create_map()">Button</button-->
+        <div id="map"></div>
+        <!--button onclick="create_map()">Button</button-->
 
     </body>
     <script src="{{ url_for('static', filename='js/predict.js', _external=True) }}"></script>

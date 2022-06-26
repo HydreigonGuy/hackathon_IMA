@@ -15,7 +15,7 @@ def home():
 def predict():
     ret = {}
     if json.loads(request.data.decode())["id"] == 1:
-        ret["img"] = "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta27d0cb379d1daf0/60ee1269f7e95137f9d04923/soraka-splash.jpg"
+        ret["img"] = open("./static/maps/maCarte1.html", "r").read()
     if json.loads(request.data.decode())["id"] == 2:
         ret["img"] = "https://pbs.twimg.com/media/Eiit6JRWAAIsbeB?format=jpg&name=large"
     if json.loads(request.data.decode())["id"] == 3:
